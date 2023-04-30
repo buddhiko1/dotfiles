@@ -1,11 +1,11 @@
-## Disks
+## Partition and filesystem
   - Make true that system is boot in EFI mode: `ls /sys/firmware/efi/efivars`.
   - Create partition with cgdisk.
   - Root filesystem：`mkfs.btrfs -L root -n 32k /dev/sda2`.
 
-## Kernel
+## Kernel config
   - Check device driver: `lspci -kv`
-  - `mv kernel-config /usr/src/linux/.config`.
+  - `mv /dotfiles/gentoo/.config /usr/src/linux/.config`.
   - Enable tty display.
     ```
     1. CONFIG_FB_VESA=y
@@ -33,22 +33,17 @@
     ```
   - Fonts:
     ```
-    1. copy fonts repository to /usr/share/fonts.
-    2. [Install noto fonts](https://wiki.gentoo.org/wiki/Fontconfig).
-    3. Install media-fonts/nerd-fonts.
-    4. Enable 70-no-bitmaps.conf and 10-sub-pixel-rgb.conf.
+    2. Install media-fonts/nerd-fonts.
     ```
 
 # [Fcitx](https://wiki.gentoo.org/wiki/Fcitx)
-  1. Install fcitx-rime, fcitx-configtool and ibus-rime(fix bug:for chines input on chrome and inkscape).
-  2. Copy `etc/environment` to /etc/environment.
-  5. Copy custom config to `~/.local/share/fcitx5/rime`.
-  6. Switch simple and tradition with `Shift + space`.
-  7. [Config rime](https://github.com/rime/home/wiki).
-  8. [Install easy_en](https://github.com/BlindingDark/rime-easy-en).
+  1. Install fcitx-rime, fcitx-configtool and ibus-rime(for chines input on chrome and inkscape).
+  2. Switch simple and tradition with `Shift + space`.
+  3. [Config rime](https://github.com/rime/home/wiki).
+  4. [Install easy_en](https://github.com/BlindingDark/rime-easy-en).
 
 ## Pali keyboard layout
-	- [keyboard layout on sway](https://github.com/swaywm/sway/issues/4250)
+  - [keyboard layout on sway](https://github.com/swaywm/sway/issues/4250)
 
 ## Cursor theme
   1. [Install gentoo-xcursor](https://wiki.gentoo.org/wiki/Cursor_themes).
@@ -57,12 +52,6 @@
 ## Portage
   - [search package](https://gpo.zugaina.org/app-i18n/fcitx)
   - `sudo emerge --ask app-portage/cfg-update`.
-  - Overlay
-    ```
-    1. `sudo emerge --ask app-eselect/eselect-repository`.
-    2. `sudo eselect repository enable guru gentoo-zh dm9pZCAq pg_overlay src_prepare-overlay`.
-    3. `sudo emerge --sync`.
-    ```
 
 ## Network
   - install and enable `iwd` and `dhcpcd`.
@@ -134,9 +123,8 @@
   - Add startup entry in sway config and copy libinput-gestures.conf to.config.
 
 ## Other app
-  - gamma: `wlsunset`.
   - System tool: `btopt ncdu fd duf tldr dmidecode wev neofetch pip`.
-  - File manager: `ranger`.
+  - File manager: `nnn`.
   - Git: `git`, `gitui`.
   - USB driver: `udisks`.
   - Dict: `goldendict`.
