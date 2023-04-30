@@ -29,7 +29,7 @@ do
 done
 
 # files for gentoo 
-files=("package.use" "repos.conf" "make.conf" "package.accept_keywords" "package.license" "package.mask" "package.unmask")
+files=("package.use" "repos.conf" "make.conf" "package.accept_keywords" "package.license" "package.mask" "package.unmask", "sets")
 for file in "${files[@]}"
 do
     sudo bash -c "$(declare -f create_soft_link); create_soft_link '$HOME/dotfiles/gentoo/etc/portage' '/etc/portage' '$file'"   

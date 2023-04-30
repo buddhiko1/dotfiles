@@ -25,6 +25,10 @@ function ed --description 'emerge uninstall'
   sudo emerge --deselect $argv
 end
 
+function edep --description 'list package dependent on'
+  sudo equery d $argv
+end
+
 function eu --description 'emerge update'
   sudo emerge --update --deep --newuse @world
 end

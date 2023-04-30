@@ -15,17 +15,11 @@
 
 ## Windows
 1. Install dependencies:
-
    - `install JetBrainMono font`
    - `choco install mingw` (run as administrator)
    - `choco install ripgrep fd` (run as administrator)
    - `winget install alacritty`
-   - `winget install DBeaver`
-
 2. Change start path appropriately in start.vbs.
 3. Send nvim.vbs to desktop.
 4. Create shortcut for nvim.vbs's shortcut.
 5. Change icon of shortcut.
-
-## bug
-- `Couldn't load neo-tree`: remove directory of neo-tree and reintall.

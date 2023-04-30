@@ -10,7 +10,6 @@ pnpm add -g @angular/language-service
 pnpm add -g graphql-language-service
 pnpm add -g @taplo/cli # toml
 
-
 # fish -c ei dev-util/marksman-bin # markdown
 # fish -c ei dev-util/lua-language-server
 # fish -c ei lemminx-bin

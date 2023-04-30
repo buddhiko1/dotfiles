@@ -52,6 +52,7 @@
 ## Portage
   - [search package](https://gpo.zugaina.org/app-i18n/fcitx)
   - `sudo emerge --ask app-portage/cfg-update`.
+  - `sudo emerge -av @system @tools`
 
 ## Network
   - install and enable `iwd` and `dhcpcd`.

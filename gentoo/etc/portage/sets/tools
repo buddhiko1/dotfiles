@@ -1,0 +1,94 @@
+# system
+app-shells/bash
+app-shells/fish
+app-admin/sudo
+app-arch/zip
+app-text/tldr
+app-misc/neofetch
+net-misc/dhcpcd
+net-wireless/iwd
+net-vpn/wireguard-tools
+x11-terms/alacritty
+sys-apps/fd
+sys-apps/miscfiles
+sys-apps/mlocate
+sys-apps/ripgrep
+sys-boot/grub
+sys-boot/plymouth
+sys-firmware/intel-microcode
+sys-fs/duf
+sys-fs/fuse:0
+sys-fs/ncdu
+sys-fs/udisks
+sys-kernel/dracut
+sys-kernel/gentoo-sources
+sys-kernel/linux-firmware
+sys-process/btop
+sys-process/cronie
+dev-python/pip
+
+# audio
+media-sound/pavucontrol
+gnome-base/gsettings-desktop-schemas
+
+# portage
+app-portage/cfg-update
+app-portage/gentoolkit
+app-portage/mirrorselect
+app-eselect/eselect-repository
+
+# sway
+gui-apps/mako
+gui-apps/swappy
+gui-apps/swayidle
+gui-apps/swaylock
+gui-apps/wev
+gui-apps/wl-clipboard
+gui-apps/wlsunset
+gui-wm/sway
+media-gfx/swayimg
+x11-themes/gentoo-xcursors
+
+# fonts
+media-fonts/arphicfonts
+media-fonts/nerd-fonts
+media-fonts/noto
+media-fonts/noto-emoji
+
+# work
+app-containers/docker
+app-containers/docker-compose
+dev-db/dbeaver-bin
+app-misc/nnn
+net-libs/nodejs
+dev-vcs/git
+dev-vcs/gitui
+
+# office
+mail-client/thunderbird-bin
+media-gfx/inkscape
+www-client/vivaldi
+
+# text
+app-editors/helix
+app-editors/neovim
+app-editors/vscode
+app-text/sigil
+app-editors/nano
+
+# dict
+app-text/goldendict
+dev-libs/libthai
+
+# input methods
+app-i18n/fcitx-configtool
+app-i18n/fcitx-rime
+app-i18n/ibus-rime
+
+# nvim
+dev-lua/luarocks
+dev-php/composer
+dev-lang/php
+dev-util/codespell
+app-text/pandoc-bin
+dev-python/pynvim
