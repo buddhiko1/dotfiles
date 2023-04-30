@@ -100,6 +100,7 @@
     pnpm config set -g auto-install-peers true
     pnpm install -g n
     sudo n lts
+    `cat package-list.txt | xargs pnpm add -g`
     ```
 
 ## Sioyek

@@ -5,6 +5,7 @@ app-admin/sudo
 app-arch/zip
 app-text/tldr
 app-misc/neofetch
+app-misc/ddcutil
 net-misc/dhcpcd
 net-wireless/iwd
 net-vpn/wireguard-tools
@@ -89,6 +90,5 @@ app-i18n/ibus-rime
 dev-lua/luarocks
 dev-php/composer
 dev-lang/php
-dev-util/codespell
 app-text/pandoc-bin
 dev-python/pynvim

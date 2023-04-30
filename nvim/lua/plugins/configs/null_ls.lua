@@ -11,7 +11,6 @@ M.config = function()
       null_ls.builtins.formatting.prettier,
 
       null_ls.builtins.diagnostics.eslint,
-      -- null_ls.builtins.diagnostics.stylelint,
       null_ls.builtins.diagnostics.codespell,
 
       null_ls.builtins.code_actions.eslint,
