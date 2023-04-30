@@ -1,0 +1,28 @@
+# required by app-shells/fish-3.4.0::gentoo
+# required by app-shells/fish (argument)
+>=dev-libs/libpcre2-10.40-r1 pcre32
+# required by media-sound/pulseaudio-daemon-16.1-r3::gentoo[alsa-plugin,alsa]
+# required by media-libs/libpulse-16.1-r1::gentoo
+# required by media-sound/pulseaudio-16.1::gentoo
+# required by media-sound/pavucontrol-5.0-r1::gentoo
+# required by media-sound/pavucontrol (argument)
+>=media-plugins/alsa-plugins-1.2.7.1 pulseaudio
+# required by app-text/sigil-1.9.20::gentoo[python_single_target_python3_10]
+# required by app-text/sigil (argument)
+>=dev-lang/python-3.10.9:3.10 tk
+# required by dev-php/composer-2.1.12::gentoo
+# required by dev-php/composer (argument)
+>=dev-lang/php-8.1.12 curl
+# required by gui-wm/sway-1.8-r1::gentoo[wallpapers]
+# required by @selected
+# required by @world (argument)
+>=gui-apps/swaybg-1.2.0 gdk-pixbuf
+# required by app-text/goldendict-99999::12101111-overlay[multimedia]
+# required by @selected
+# required by @world (argument)
+>=dev-qt/qtmultimedia-5.15.8 gstreamer
+#required by dev-qt/qtwebengine-5.15.7_p20221122::gentoo
+# required by dev-python/PyQtWebEngine-5.15.6::gentoo
+# required by www-client/qutebrowser-2.5.2-r1::gentoo[python_single_target_python3_10]
+# required by www-client/qutebrowser (argument)
+>=sys-libs/zlib-1.2.13-r1 minizip
