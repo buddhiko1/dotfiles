@@ -101,6 +101,7 @@
     pnpm install -g n
     sudo n lts
     `cat package-list.txt | xargs pnpm add -g`
+    `sudo visudo` uncomment ('Defaults        secure_path="/home/shun/.local/share/pnpm:$PATH"')
     ```
 
 ## Sioyek
