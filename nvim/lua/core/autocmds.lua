@@ -24,15 +24,6 @@ autocmd("TextYankPost", {
   end,
 })
 
--- alpha plugin
-autocmd("User", {
-  pattern = "AlphaReady",
-  desc = "disable status, tabline and cmdline for alpha",
-  callback = function()
-    vim.cmd("set showtabline=0")
-  end,
-})
-
 autocmd("BufUnload", {
   buffer = 0,
   desc = "enable status, tabline and cmdline after alpha",

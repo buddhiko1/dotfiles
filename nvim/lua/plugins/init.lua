@@ -20,13 +20,6 @@ local plugins = {
       require("plugins.configs.comment").config()
     end,
   },
-  ["folke/twilight.nvim"] = {
-    disable = true,
-    config = function()
-      require("plugins.configs.twilight").setup()
-      require("plugins.configs.twilight").config()
-    end,
-  },
   ["kylechui/nvim-surround"] = {
     config = function()
       require("plugins.configs.surround").config()
@@ -141,8 +134,10 @@ local plugins = {
   ["nvim-neo-tree/neo-tree.nvim"] = {
     requires = { "MunifTanjim/nui.nvim" },
     branch = "v2.x",
-    config = function()
+    setup = function()
       require("plugins.configs.neo_tree").setup()
+    end,
+    config = function()
       require("plugins.configs.neo_tree").config()
     end,
   },
@@ -162,10 +157,6 @@ local plugins = {
       require("plugins.configs.fterm").setup()
       require("plugins.configs.fterm").config()
     end,
-  },
-  -- editor in browser, active with <e>
-  ["glacambre/firenvim"] = {
-    run = function() vim.fn['firenvim#install'](0) end
   },
   -- debug
   ["mfussenegger/nvim-dap"] = {

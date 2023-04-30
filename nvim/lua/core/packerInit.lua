@@ -4,7 +4,7 @@ local ensure_packer = function()
   if fn.empty(fn.glob(install_path)) > 0 then
     print("installing packer ...")
     fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
+    vim.cmd("packadd packer.nvim")
     print("packer installed successfully!")
     return true
   end
@@ -29,7 +29,6 @@ return packer.startup(function(use)
   for _, plugin in pairs(plugins) do
     use(plugin)
   end
-
   if packer_bootstrap then
     packer.sync()
   end
