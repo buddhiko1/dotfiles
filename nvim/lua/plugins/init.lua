@@ -131,15 +131,11 @@ local plugins = {
       require("plugins.configs.lualine").config()
     end,
   },
-  ["nvim-neo-tree/neo-tree.nvim"] = {
-    requires = { "MunifTanjim/nui.nvim" },
-    branch = "v2.x",
-    setup = function()
-      require("plugins.configs.neo_tree").setup()
-    end,
+  ['nvim-tree/nvim-tree.lua'] = {
     config = function()
-      require("plugins.configs.neo_tree").config()
-    end,
+      require("plugins.configs.file_tree").setup()
+      require("plugins.configs.file_tree").config()
+    end
   },
   ["ahmedkhalf/project.nvim"] = {
     config = function()

@@ -185,12 +185,11 @@ mode "$system_mode" {
 bindsym $mod+Escape mode "$system_mode"
 
 ### app mode
-set $app_mode ( d ) dbeaver ( e ) email  ( i ) inkscape   ( k ) krita   ( o ) office  ( s ) sigil  ( v ) vscode
+set $app_mode ( d ) dbeaver ( e ) email  ( i ) inkscape   ( o ) office  ( s ) sigil  ( v ) vscode
 mode "$app_mode" {
   bindsym d exec dbeaver,                           mode "default"
   bindsym e exec thunderbird-bin,                   mode "default"
   bindsym i exec inkscape,                          mode "default"
-  bindsym k exec krita,                             mode "default"
   bindsym o exec $HOME/Software/office.AppImage,    mode "default"
   bindsym s exec sigil,                             mode "default"
   bindsym v exec vscode,                            mode "default"

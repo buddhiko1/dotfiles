@@ -42,7 +42,6 @@ M.config = function()
       section_separators = { left = "", right = "" },
       disabled_filetypes = {
         "packer",
-        "neo-tree",
         "tagbar",
         "dapui_scopes",
         "dapui_breakpoints",

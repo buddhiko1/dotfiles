@@ -125,14 +125,3 @@
   - [Install magic gesture](https://github.com/bulletmark/libinput-gestures).
   - Add startup entry in sway config and copy libinput-gestures.conf to.config.
 
-## Other app
-  - System tool: `btopt ncdu fd duf tldr dmidecode wev neofetch pip`.
-  - File manager: `nnn`.
-  - Git: `git`, `gitui`.
-  - USB driver: `udisks`.
-  - Dict: `goldendict`.
-  - EPUB: `sigil AppImage`.
-  - Office: `onlyoffice AppImage`.
-  - Screenshot : `grimshot`.
-  - Image editor: `swappy`.
-  - Image viewer: `swayimg`.

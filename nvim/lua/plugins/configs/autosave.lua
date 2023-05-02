@@ -24,8 +24,7 @@ M.config = function()
       filters.modified,
       -- exclude filetype
       filters.filetype("TelescopePrompt"),
-      filters.filetype("neo-tree"),
-      filters.filetype("Outline"),
+      filters.filetype("NvimTree"),
       filters.filetype("vim"),
     },
     hooks = {
