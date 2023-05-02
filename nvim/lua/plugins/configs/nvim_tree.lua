@@ -22,9 +22,9 @@ local on_attach = function(bufnr)
   -- override mappings
   map("n", "t", api.node.open.tab, opts('New tab'))
   map("n", "v", api.node.open.vertical, opts('Vertical'))
-  map("n", "y", api.fs.copy.node, opts('Copy'))
   map("n", "R", api.tree.reload, opts('Refresh'))
   map("n", "?", api.tree.toggle_help, opts('Help'))
+  map("n", ".", api.tree.toggle_hidden_filter, opts('Hidden'))
 end
 
 
@@ -129,7 +129,7 @@ local options = {
     },
   },
   notify = {
-    threshold = vim.log.levels.WARNING,
+    threshold = vim.log.levels.INFO,
   },
   ui = {
     confirm = {

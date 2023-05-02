@@ -1,6 +1,6 @@
 local load = require("utils").load
 local map = require("utils").map
-local get_alacritty_theme = require("utils").get_alacritty_theme 
+local get_alacritty_theme = require("utils").get_alacritty_theme
 local disable_mapping_at = require("utils").disable_mapping_at
 
 local M = {}
@@ -56,8 +56,8 @@ M.config = function()
     sections = {
       lualine_a = { "mode" },
       lualine_b = { "branch", "diff", "diagnostics" },
-      lualine_c = { "lsp_progress" },
-      -- lualine_c = {},
+      -- lualine_c = { "lsp_progress" },
+      lualine_c = {},
       lualine_x = { "encoding" },
       lualine_y = { "progress" },
       lualine_z = { "location" },

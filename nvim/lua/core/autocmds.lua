@@ -7,6 +7,7 @@ autocmd({ "VimEnter" }, {
     vim.g.log = log
     vim.cmd("set laststatus=0")
     vim.cmd("set nofoldenable")
+    vim.cmd("set showtabline=2")
     active_theme()
   end,
 })
@@ -20,14 +21,6 @@ autocmd({ "VimLeave" }, {
 -- Highlight yanked text
 autocmd("TextYankPost", {
   callback = function()
-    vim.highlight.on_yank({ higroup = "Visual", timeout = 2500 })
-  end,
-})
-
-autocmd("BufUnload", {
-  buffer = 0,
-  desc = "enable status, tabline and cmdline after alpha",
-  callback = function()
-    vim.cmd("set showtabline=2")
+    vim.highlight.on_yank({ higroup = "Visual", timeout = 2000 })
   end,
 })

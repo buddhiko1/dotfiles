@@ -127,7 +127,7 @@ end
 M.config = function()
   local options = {
     defaults = {
-      initial_mode = "normal",
+      initial_mode = "insert",
 
       -- mapping
       mappings = {
@@ -145,7 +145,7 @@ M.config = function()
 
           ["q"] = actions.close,
 
-          ["h"] = actions.which_key,
+          -- ["h"] = actions.which_key,
 
           ["t"] = actions.select_tab,
           ["v"] = actions.file_vsplit,
@@ -190,7 +190,7 @@ M.config = function()
       },
       selection_strategy = "reset",
       sorting_strategy = "ascending",
-      file_ignore_patterns = { "node_modules", ".git" },
+      file_ignore_patterns = { "node_modules", ".git", "pnpm-lock.yaml"},
     },
   }
 

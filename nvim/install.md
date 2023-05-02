@@ -9,6 +9,7 @@
     - `vscode-chrome-debug` (add "185.199.108.133 raw.githubusercontent.com" to /etc/hosts).
 7. Install dependence of markdown preview.
     - `sudo npm install -g @compodoc/live-server`
+8. Add .rgignore for live grep ignore.
 
 ## linux
 - clear shada: `cat /dev/null > .local/state/nvim/shada/main.shada`

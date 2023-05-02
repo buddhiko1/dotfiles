@@ -133,8 +133,8 @@ local plugins = {
   },
   ['nvim-tree/nvim-tree.lua'] = {
     config = function()
-      require("plugins.configs.file_tree").setup()
-      require("plugins.configs.file_tree").config()
+      require("plugins.configs.nvim_tree").setup()
+      require("plugins.configs.nvim_tree").config()
     end
   },
   ["ahmedkhalf/project.nvim"] = {
