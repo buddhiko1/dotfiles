@@ -107,6 +107,10 @@ function pu --description 'pnpm update'
   pnpm add $argv
 end
 
+function pr --description 'pnpm run'
+  pnpm run $argv
+end
+
 function pe --description 'pnpm exec'
   pnpm exec $argv
 end

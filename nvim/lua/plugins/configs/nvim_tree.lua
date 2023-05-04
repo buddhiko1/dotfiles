@@ -124,7 +124,7 @@ local options = {
   tab = {
     sync = {
       open = true,
-      close = false,
+      close = true,
       ignore = {},
     },
   },
@@ -142,6 +142,11 @@ local options = {
       async = true,
     },
   },
+  actions = {
+    open_file = {
+      quit_on_open = true
+    }
+  }
 }
 
 M.config = function()
