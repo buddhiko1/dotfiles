@@ -29,7 +29,7 @@ end
 
 local _is_hiding_filetype = function()
   local _disable_file_types = { "alpha", "TelescopePromt" }
-  for i, filetype in ipairs(_disable_file_types) do
+  for _, filetype in ipairs(_disable_file_types) do
     if vim.bo.filetype == filetype then
       return true
     end

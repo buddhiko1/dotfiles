@@ -62,10 +62,10 @@ local options = {
     {
       type = "group",
       val = {
-        button("LD fr", "  Recent File  "),
+        button("LD fr", "  Recent File  "),
         button("LD fp", "  Projects  "),
-        button("LD fs", "  Live Grep  "),
-        button("LD  <Esc>", "  Quit neovim "),
+        button("LD fs", "  Live Grep  "),
+        button("LD  <Esc>", "󰗼  Quit neovim "),
       },
       opts = {
         spacing = 1,

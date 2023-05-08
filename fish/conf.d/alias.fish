@@ -8,10 +8,6 @@ function disk --description 'disk'
   ncdu $argv
 end
 
-function doc --description 'search linux document'
-  tldr $argv
-end
-
 # emerge 
 function es --description 'emerge search'
   sudo emerge --search $argv

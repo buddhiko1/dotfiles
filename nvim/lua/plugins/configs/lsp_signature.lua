@@ -11,16 +11,16 @@ M.config = function()
     floating_window = true,
     hint_enable = false,
     fix_pos = true,
-    hint_prefix = " ",
+    hint_prefix = "󰌵 ",
     hint_scheme = "String",
     hi_parameter = "Search",
     max_height = 22,
-    max_width = 120, -- max_width of signature floating_window, line will be wrapped if exceed max_width
+    max_width = 120,
     handler_opts = {
-      border = "single", -- double, single, shadow, none
+      border = "single",
     },
-    zindex = 200, -- by default it will be on top of all floating windows, set to 50 send it to bottom
-    padding = "", -- character to pad on left and right of signature can be ' ', or '|'  etc
+    zindex = 200,
+    padding = "",
   }
 
   lsp_signature.setup(options)

@@ -44,10 +44,10 @@ local options = {
       max = vim.diagnostic.severity.ERROR,
     },
     icons = {
-      hint = " ",
-      info = " ",
-      warning = " ",
-      error = " ",
+      hint = " 󰌵",
+      info = " ",
+      warning = " ",
+      error = " ",
     },
   },
   git = {
@@ -88,7 +88,7 @@ local options = {
       glyphs = {
         default = "",
         symlink = "",
-        bookmark = "",
+        bookmark = "",
         modified = "●",
         folder = {
           arrow_closed = "",
@@ -101,11 +101,11 @@ local options = {
           symlink_open = "",
         },
         git = {
-          deleted = "",
-          renamed = "",
-          untracked = "?",
-          ignored = "",
-          unstaged = "",
+          deleted = "",
+          renamed = "",
+          untracked = "󰢤",
+          ignored = "",
+          unstaged = "",
           staged = "",
           unmerged = "",
         },

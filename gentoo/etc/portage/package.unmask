@@ -3,6 +3,7 @@ dev-vcs/gitui::dm9pZCAq
 app-text/tldr::guru
 gui-apps/wlsunset::guru
 gui-apps/wev::guru
+media-fonts/symbola::guru
 dev-db/dbeaver-bin::gentoo-zh
 media-fonts/nerd-fonts::gentoo-zh
 media-gfx/swayimg::src_prepare-overlay

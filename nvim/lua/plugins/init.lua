@@ -3,7 +3,7 @@
 local plugins = {
   ["lewis6991/impatient.nvim"] = {},
   ["wbthomason/packer.nvim"] = {},
-  ["kyazdani42/nvim-web-devicons"] = {
+  ["nvim-tree/nvim-web-devicons"] = {
     config = function()
       require("plugins.configs.icons").config()
     end,
@@ -104,7 +104,7 @@ local plugins = {
     end,
   },
   ["rafcamlet/tabline-framework.nvim"] = {
-    requires = { "kyazdani42/nvim-web-devicons" },
+    requires = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("plugins.configs.tabline").setup()
       require("plugins.configs.tabline").config()
@@ -125,13 +125,14 @@ local plugins = {
 
   -- status line
   ["nvim-lualine/lualine.nvim"] = {
-    requires = { "kyazdani42/nvim-web-devicons", "arkav/lualine-lsp-progress" },
+    requires = { "nvim-tree/nvim-web-devicons", "arkav/lualine-lsp-progress" },
     after = 'github-nvim-theme',
     config = function()
       require("plugins.configs.lualine").config()
     end,
   },
   ['nvim-tree/nvim-tree.lua'] = {
+    requires = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("plugins.configs.nvim_tree").setup()
       require("plugins.configs.nvim_tree").config()
@@ -225,7 +226,7 @@ local plugins = {
   },
   ["glepnir/lspsaga.nvim"] = {
     branch = "main",
-    requires = { "kyazdani42/nvim-web-devicons" },
+    requires = { "nvim-tree/nvim-web-devicons", "nvim-treesitter/nvim-treesitter" },
     config = function()
       require("plugins.configs.lsp_saga").setup()
       require("plugins.configs.lsp_saga").config()

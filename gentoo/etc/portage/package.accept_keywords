@@ -11,6 +11,7 @@ app-containers/docker-compose **
 app-editors/helix ~amd64
 app-misc/nnn ~amd64
 app-misc/ddcutil ~amd64
+media-fonts/symbola ~amd64
 
 # language server
 dev-util/marksman-bin ~amd64

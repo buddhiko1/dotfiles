@@ -10,5 +10,4 @@ graphql-language-service
 alacritty-themes
 eslint
 prettier
-cspell
 @compodoc/live-server
