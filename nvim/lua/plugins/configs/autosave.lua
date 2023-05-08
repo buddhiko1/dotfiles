@@ -16,7 +16,7 @@ M.config = function()
     },
     debounce = {
       enabled = true, -- Should debouncing be enabled
-      delay = 1000, -- If enabled, only save the file at most every `delay` ms
+      delay = 10000, -- If enabled, only save the file at most every `delay` ms
     },
     filters = { -- The filters to apply, see above for all options.
       filters.writeable,

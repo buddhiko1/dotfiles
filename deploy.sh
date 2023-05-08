@@ -38,7 +38,6 @@ sudo bash -c "$(declare -f create_soft_link); create_soft_link '$HOME/dotfiles/g
 sudo bash -c "$(declare -f create_soft_link); create_soft_link '$HOME/dotfiles/gentoo/etc' '/etc' 'fstab'"   
 sudo bash -c "$(declare -f create_soft_link); create_soft_link '$HOME/dotfiles/gentoo/etc' '/etc' 'environment'"   
 sudo bash -c "$(declare -f create_soft_link); create_soft_link '$HOME/dotfiles/gentoo/etc' '/etc/systemd/system/getty@tty1.service.d' 'autologin.conf'"   
-# sudo bash -c "$(declare -f create_soft_link); create_soft_link '$HOME/dotfiles/gentoo/etc/bluetooth' '/etc/bluetooth' 'main.conf'"   
 
 # other file
 create_soft_link "$HOME/dotfiles" "$HOME/.xkb/symbols" "us-pali"

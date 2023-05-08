@@ -15,7 +15,7 @@ swaymsg 'workspace 3'
 swaymsg 'workspace 4'
 
 # start other app
-swaymsg 'exec goldendict'
+# swaymsg 'exec goldendict'
 
 # set workspace 2 as home workspace
 swaymsg 'workspace number 2'

@@ -50,7 +50,7 @@ end
 local M = {}
 
 M.setup = function()
-  map("n", "q", "<cmd> :tabclose <CR>")
+  map("n", "q", "<cmd> :wq! <CR>")
   map("n", "L", "<cmd> :tabnext <CR>")
   map("n", "H", "<cmd> :tabprevious <CR>")
 end
