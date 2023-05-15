@@ -20,11 +20,12 @@ local on_attach = function(bufnr)
   -- default mappings
   api.config.mappings.default_on_attach(bufnr)
   -- override mappings
-  map("n", "t", api.node.open.tab, opts('New tab'))
+  map("n", "t", api.node.open.tab_drop, opts('New tab'))
   map("n", "v", api.node.open.vertical, opts('Vertical'))
   map("n", "R", api.tree.reload, opts('Refresh'))
   map("n", "?", api.tree.toggle_help, opts('Help'))
   map("n", ".", api.tree.toggle_hidden_filter, opts('Hidden'))
+  map('n', '<CR>',  api.node.open.drop, opts('Open'))
 end
 
 
