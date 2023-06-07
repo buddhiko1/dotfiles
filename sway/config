@@ -239,7 +239,7 @@ output * bg $HOME/.config/background/tree.jpg fill
 ### sleep
 exec swayidle -w \
   timeout 1200 'swaylock' \
-  timeout 9600 'systemctl hybrid-sleep' \
+  timeout 3600 'systemctl hybrid-sleep' \
   before-sleep 'block'
 
 ### lock

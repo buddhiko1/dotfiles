@@ -18,7 +18,6 @@ dev-util/lemminx-bin::guru
 # fcitx5
 app-i18n/fcitx-chinese-addons::gentoo-zh
 app-i18n/fcitx-configtool::gentoo-zh
-app-i18n/fcitx-rime::gentoo-zh
 app-i18n/fcitx::gentoo-zh
 app-i18n/libime::gentoo-zh
 app-i18n/fcitx-qt::gentoo-zh

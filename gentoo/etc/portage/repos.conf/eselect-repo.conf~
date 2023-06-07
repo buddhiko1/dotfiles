@@ -44,3 +44,7 @@ sync-type = git
 sync-uri = https://github.com/gentoo-mirror/goduck777.git
 
 
+[ryans]
+location = /var/db/repos/ryans
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/ryans.git
