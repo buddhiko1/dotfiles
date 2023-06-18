@@ -19,7 +19,7 @@ text-caps-lock-color=ffffff
 text-ver-color=ffffff
 text-clear-color=ffffff
 text-wrong-color=ffffff
-image=~/.config/background/bg.svg
+image=~/.config/background/lock.jpg
 ignore-empty-password
 daemonize
 show-failed-attempts

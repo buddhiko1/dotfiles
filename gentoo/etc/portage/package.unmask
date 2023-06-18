@@ -15,15 +15,6 @@ dev-util/marksman-bin::gentoo-zh
 dev-util/lua-language-server::guru
 dev-util/lemminx-bin::guru
 
-# fcitx5
-app-i18n/fcitx-chinese-addons::gentoo-zh
-app-i18n/fcitx-configtool::gentoo-zh
-app-i18n/fcitx::gentoo-zh
-app-i18n/libime::gentoo-zh
-app-i18n/fcitx-qt::gentoo-zh
-x11-libs/xcb-imdkit::gentoo-zh
-app-i18n/rime-prelude::gentoo-zh
-
 # xiaoyifang/goldendict
 app-text/goldendict::12101111-overlay
 dev-libs/libthai::gentoo-zh

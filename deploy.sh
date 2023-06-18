@@ -25,7 +25,7 @@ done
 files=("luna_pinyin_userdb" "default.custom.yaml" "luna_pinyin.custom.yaml")
 for file in "${files[@]}"
 do
-    create_soft_link "$HOME/dotfiles/rime" "$HOME/.local/share/fcitx5/rime" "$file"
+    create_soft_link "$HOME/dotfiles/rime" "$HOME/.config/share/fcitx5/rime" "$file"
 done
 
 # files for gentoo 

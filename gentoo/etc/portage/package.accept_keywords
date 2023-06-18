@@ -18,16 +18,6 @@ dev-util/marksman-bin ~amd64
 dev-util/lua-language-server ~amd64
 dev-util/lemminx-bin ~amd64
 
-# input method
-app-i18n/fcitx ~amd64
-app-i18n/libime ~amd64
-app-i18n/fcitx-qt ~amd64
-x11-libs/xcb-imdkit ~amd64
-app-i18n/fcitx-configtool ~amd64
-app-i18n/fcitx-chinese-addons ~amd64
-app-i18n/rime-prelude ~amd64
-app-i18n/ibus-rime ~amd64
-
 # xiaoyifang/goldendict
 app-text/goldendict **
 dev-libs/libthai ~amd64

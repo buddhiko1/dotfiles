@@ -206,7 +206,7 @@ bindsym $mod+u exec alacritty -o font.size=13 font.offset.y=6 -e hx
 bindsym $mod+m exec EDITOR=nvim VISUAL=nvim alacritty -e nnn 
 bindsym $mod+p exec ~/Software/sioyek.AppImage
 
-bindsym $mod+semicolon exec goldendict 
+bindsym $mod+semicolon exec ~/Software/dict.AppImage
 for_window [class="GoldenDict"] floating enable
 
 ### libinput-gesturqutebrowser
@@ -222,7 +222,7 @@ for_window [class="GoldenDict"] floating enable
 exec wlsunset -t $temp_middle -S 23:58 -s 23:58
 
 ### fcitx
-exec_always fcitx5 -d --replace
+exec_always fcitx -d --replace
 
 ### pali keyboard layout
 # input type:keyboard {
@@ -234,7 +234,7 @@ seat seat0 xcursor_theme gentoo
 seat * hide_cursor 5000
 
 ### background
-output * bg $HOME/.config/background/tree.jpg fill
+output * bg $HOME/.config/background/bg.jpg fill
 
 ### sleep
 exec swayidle -w \
