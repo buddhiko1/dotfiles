@@ -37,7 +37,7 @@
     ```
 
 # [Fcitx](https://wiki.gentoo.org/wiki/Fcitx)
-  1. Install fcitx-rime, fcitx-configtool and ibus-rime(for chines input on chrome and inkscape).
+  1. Install fcitx-rime, fcitx-configtool.
   2. Switch simple and tradition with `Shift + space`.
   3. [Config rime](https://github.com/rime/home/wiki).
   4. [Install easy_en](https://github.com/BlindingDark/rime-easy-en).
