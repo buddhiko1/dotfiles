@@ -21,7 +21,7 @@ local M = {}
 
 M.setup = function()
   -- viewer
-  map("n", "<leader>sf", "<cmd>Lspsaga lsp_finder<CR>")
+  map("n", "<leader>sf", "<cmd>Lspsaga finder<CR>")
   map("n", "<leader>sd", "<cmd>Lspsaga peek_definition<CR>")
   map("n", "<leader>sh", "<cmd>Lspsaga hover_doc<CR>")
 

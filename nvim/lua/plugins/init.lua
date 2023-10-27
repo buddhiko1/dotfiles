@@ -9,11 +9,6 @@ local plugins = {
     end,
   },
 
-  ["lukas-reineke/indent-blankline.nvim"] = {
-    config = function()
-      require("plugins.configs.blankline").config()
-    end,
-  },
   ["numToStr/Comment.nvim"] = {
     config = function()
       require("plugins.configs.comment").setup()

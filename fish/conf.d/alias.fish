@@ -8,6 +8,23 @@ function disk --description 'disk'
   ncdu $argv
 end
 
+# docker
+function du --description 'docker compose up -d'
+  docker compose up -d
+end
+
+function ds --description 'docker compose stop'
+  docker compose stop
+end
+
+function dr --description 'docker compose restart'
+  docker compose restart 
+end
+
+function dd --description 'docker compose rm'
+  docker compose rm
+end
+
 # emerge 
 function es --description 'emerge search'
   sudo emerge --search $argv
