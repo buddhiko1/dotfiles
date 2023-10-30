@@ -18,7 +18,7 @@ set $term alacritty
 set $hxTerm alacritty -o font.size=13 font.offset.y=6
 
 ### control 
-bindsym $mod+Shift+p    reload
+bindsym $mod+Shift+s    reload
 bindsym $mod+Shift+q    exec "swaynag -t warning -m 'Do you really want to exit sway?' -B 'Yes, exit sway' 'swaymsg exit'"
 
 ### style
@@ -186,9 +186,8 @@ mode "$system_mode" {
 bindsym $mod+Delete mode "$system_mode"
 
 ### app mode
-set $app_mode ( d ) dbeaver ( e ) email  ( i ) inkscape   ( o ) office  ( s ) sigil  ( v ) vscode
+set $app_mode ( d ) email  ( i ) inkscape   ( o ) office  ( s ) sigil  ( v ) vscode
 mode "$app_mode" {
-  bindsym d exec dbeaver,                           mode "default"
   bindsym e exec thunderbird-bin,                   mode "default"
   bindsym i exec inkscape,                          mode "default"
   bindsym o exec office.AppImage,                   mode "default"
@@ -252,7 +251,7 @@ output * bg $HOME/.config/background/bg.jpg fill
 ### sleep
 exec swayidle -w \
   timeout 1200 'swaylock' \
-  timeout 93600 'systemctl hybrid-sleep' \
+  timeout 3600 'systemctl hybrid-sleep' \
   before-sleep 'block'
 
 ### notification

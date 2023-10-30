@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy configuration file from remote server to local machine
-scp root@43.134.168.182:/etc/wireguard/wg0.conf /tmp/
+scp root@www.buddhiko.com:/etc/wireguard/wg0.conf /tmp/
 
 # Read the value of ListenPort from the local configuration file
 listen_port=$(awk '/^ListenPort/{print $3}' /tmp/wg0.conf)
