@@ -77,6 +77,11 @@ verbs: [
         leave_broot: false
     }
 
+    {
+        invocation: quit 
+        shortcut: ;
+        internal: "quit"
+    }
     # Here's an example of a shortcut bringing you to your home directory
     # {
     #     invocation: home
