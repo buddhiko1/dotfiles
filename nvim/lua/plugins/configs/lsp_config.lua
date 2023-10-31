@@ -7,7 +7,6 @@ local servers = {
   "html",
   "tsserver",
   "graphql",
-  "lua_ls",
   "dockerls",
   "yamlls",
   "jsonls",
