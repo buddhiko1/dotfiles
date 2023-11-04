@@ -186,9 +186,9 @@ mode "$system_mode" {
 bindsym $mod+Delete mode "$system_mode"
 
 ### app mode
-set $app_mode ( d ) email  ( i ) inkscape   ( o ) office  ( s ) sigil  ( v ) vscode
+set $app_mode ( g ) gimp  ( i ) inkscape   ( o ) office  ( s ) sigil  ( v ) vscode
 mode "$app_mode" {
-  bindsym e exec thunderbird-bin,                   mode "default"
+  bindsym g exec gimp,                              mode "default"
   bindsym i exec inkscape,                          mode "default"
   bindsym o exec office.AppImage,                   mode "default"
   bindsym s exec sigil,                             mode "default"

@@ -25,7 +25,7 @@ M.config = function()
 
   local gitui = fterm:new({
     ft = "gitui",
-    cmd = "ssh-add ~/.ssh/id_ed25519 && gitui",
+    cmd = "~/.config/nvim/lint.sh && ssh-add ~/.ssh/id_ed25519 && gitui",
     dimensions = {
       height = 0.9,
       width = 0.9,

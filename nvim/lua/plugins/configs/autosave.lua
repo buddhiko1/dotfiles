@@ -27,11 +27,6 @@ M.config = function()
       filters.filetype("NvimTree"),
       filters.filetype("vim"),
     },
-    hooks = {
-      on_enable = nil, -- Called when the plugin is enabled for the first time.
-      pre_write = nil,
-      post_write = nil,
-    },
   }
 
   autosave.setup(options)

@@ -12,11 +12,12 @@ autocmd({ "VimEnter" }, {
   end,
 })
 
-autocmd({ "VimLeave" }, {
-  callback = function()
-    vim.cmd("!kill -9 node")
-  end,
-})
+-- fix debugger bug
+-- autocmd({ "VimLeave" }, {
+--   callback = function()
+--     vim.cmd("!kill -9 node")
+--   end,
+-- })
 
 -- Highlight yanked text
 autocmd("TextYankPost", {
