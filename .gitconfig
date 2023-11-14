@@ -1,6 +1,6 @@
 [user]
-  name = name
-  email = name@outlook.com
+  name = buddhiko 
+	email = buddhiko@outlook.com
 [core]
   editor = nvim 
 [init]

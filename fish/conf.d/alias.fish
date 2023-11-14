@@ -43,7 +43,7 @@ function edep --description 'list package dependent on'
 end
 
 function eu --description 'emerge update'
-  sudo emerge --update --deep --newuse @world --exclude nodejs
+  sudo emerge --update --deep --newuse @world --exclude nodejs --exclude gentoo-sources --exclude grub
 end
 
 function ec --description 'emerge deep clean'
