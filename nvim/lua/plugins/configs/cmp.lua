@@ -5,11 +5,10 @@ local M = {}
 M.config = function()
   local cmp = load("cmp")
   local compare = load("cmp.config.compare")
-  local luasnip = load("luasnip")
 
   local options = {
     enabled = function()
-      return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt" or require("cmp_dap").is_dap_buffer()
+      return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt"
     end,
     window = {
       -- default
@@ -24,11 +23,6 @@ M.config = function()
         border = "single",
       },
     },
-    snippet = {
-      expand = function(args)
-        luasnip.lsp_expand(args.body)
-      end,
-    },
     formatting = {
       -- fields = { 'menu', 'abbr', 'kind' },
       format = function(entry, vim_item)
@@ -36,8 +30,6 @@ M.config = function()
         vim_item.menu = ({
               buffer = "[Buffer]",
               nvim_lsp = "[LSP]",
-              nvim_lua = "[Lua]",
-              luasnip = "[LuaS]",
               look = "[Dict]",
               path = "[Path]",
             })[entry.source.name]
@@ -54,11 +46,6 @@ M.config = function()
           ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_next_item()
-        elseif luasnip.expand_or_jumpable() then
-          vim.fn.feedkeys(
-            vim.api.nvim_replace_termcodes("<Plug>luasnip-expand-or-jump", true, true, true),
-            ""
-          )
         else
           fallback()
         end
@@ -70,8 +57,6 @@ M.config = function()
           ["<S-Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_prev_item()
-        elseif luasnip.jumpable(-1) then
-          vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-jump-prev", true, true, true), "")
         else
           fallback()
         end
@@ -85,8 +70,6 @@ M.config = function()
       { name = "nvim_lsp" },
       { name = "path" },
       { name = "buffer" },
-      { name = "luasnip" },
-      { name = "nvim_lua" },
       { 
         name = 'look',
         keyword_length = 4,
@@ -122,11 +105,6 @@ M.config = function()
   cmp.setup.cmdline("/", {
     sources = {
       { name = "buffer" },
-    },
-  })
-  cmp.setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
-    sources = {
-      { name = "dap" },
     },
   })
 end

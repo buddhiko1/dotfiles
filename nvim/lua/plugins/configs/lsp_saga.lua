@@ -97,7 +97,6 @@ M.config = function()
     },
 
     finder = {
-
       edit = { 'o', '<CR>' },
       vsplit = 's',
       split = 'i',

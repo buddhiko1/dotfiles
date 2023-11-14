@@ -61,18 +61,10 @@ local plugins = {
       require("plugins.configs.ccc").config()
     end,
   },
-  -- register
-  ["tversteeg/registers.nvim"] = {
-    config = function()
-      require("plugins.configs.registers").config()
-    end,
-  },
   ["folke/noice.nvim"] = {
     event = "VimEnter",
     requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
     config = function()
-      require("plugins.configs.notify").setup()
-      require("plugins.configs.notify").config()
       require("plugins.configs.noice").setup()
       require("plugins.configs.noice").config()
     end,
@@ -164,12 +156,6 @@ local plugins = {
     end,
   },
   -- complements
-  ["L3MON4D3/LuaSnip"] = {
-    config = function()
-      require("plugins.configs.luasnip").config()
-    end,
-  },
-  ["saadparwaiz1/cmp_luasnip"] = {},
   ["Exafunction/codeium.vim"] = {
     config = function()
       require("plugins.configs.codeium").setup()
@@ -181,9 +167,7 @@ local plugins = {
       "onsails/lspkind.nvim",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-cmdline",
-      "rcarriga/cmp-dap",
       "octaltree/cmp-look",
       "hrsh7th/cmp-path"
     },
@@ -209,14 +193,8 @@ local plugins = {
       require("plugins.configs.lsp_config").config()
     end,
   },
-  ["ray-x/lsp_signature.nvim"] = {
-    config = function()
-      require("plugins.configs.lsp_signature").config()
-    end,
-  },
-  ["glepnir/lspsaga.nvim"] = {
-    branch = "main",
-    requires = { "nvim-tree/nvim-web-devicons", "nvim-treesitter/nvim-treesitter" },
+  ["nvimdev/lspsaga.nvim"] = {
+    after = "nvim-lspconfig",
     config = function()
       require("plugins.configs.lsp_saga").setup()
       require("plugins.configs.lsp_saga").config()
