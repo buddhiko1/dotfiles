@@ -5,6 +5,7 @@ local M = {}
 M.config = function()
   local cmp = load("cmp")
   local compare = load("cmp.config.compare")
+  local luasnip = load("luasnip")
 
   local options = {
     enabled = function()
@@ -23,6 +24,11 @@ M.config = function()
         border = "single",
       },
     },
+    snippet = {
+      expand = function(args)
+        luasnip.lsp_expand(args.body)
+      end,
+    },
     formatting = {
       -- fields = { 'menu', 'abbr', 'kind' },
       format = function(entry, vim_item)
@@ -30,6 +36,7 @@ M.config = function()
         vim_item.menu = ({
               buffer = "[Buffer]",
               nvim_lsp = "[LSP]",
+              luasnip = "[Snip]",
               look = "[Dict]",
               path = "[Path]",
             })[entry.source.name]
@@ -46,6 +53,11 @@ M.config = function()
           ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_next_item()
+        elseif luasnip.expand_or_jumpable() then
+          vim.fn.feedkeys(
+            vim.api.nvim_replace_termcodes("<Plug>luasnip-expand-or-jump", true, true, true),
+            ""
+          )
         else
           fallback()
         end
@@ -57,6 +69,8 @@ M.config = function()
           ["<S-Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_prev_item()
+        elseif luasnip.jumpable(-1) then
+          vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-jump-prev", true, true, true), "")
         else
           fallback()
         end
@@ -70,6 +84,7 @@ M.config = function()
       { name = "nvim_lsp" },
       { name = "path" },
       { name = "buffer" },
+      { name = "luasnip" },
       { 
         name = 'look',
         keyword_length = 4,

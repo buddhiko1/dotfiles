@@ -65,6 +65,8 @@ local plugins = {
     event = "VimEnter",
     requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
     config = function()
+      require("plugins.configs.notify").setup()
+      require("plugins.configs.notify").config()
       require("plugins.configs.noice").setup()
       require("plugins.configs.noice").config()
     end,
@@ -156,6 +158,11 @@ local plugins = {
     end,
   },
   -- complements
+   ["L3MON4D3/LuaSnip"] = {
+    config = function()
+      require("plugins.configs.luasnip").config()
+    end,
+  },
   ["Exafunction/codeium.vim"] = {
     config = function()
       require("plugins.configs.codeium").setup()
