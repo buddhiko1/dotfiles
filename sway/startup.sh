@@ -22,5 +22,8 @@ swaymsg 'workspace 4'
 # set workspace 2 as home workspace
 swaymsg 'workspace number 2'
 
+# start goldendict
+swaymsg 'exec ~/.local/bin/dict.AppImage'
+
 # get wireguard port
 ~/.config/sway/get_wireguard_port.sh
