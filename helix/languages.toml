@@ -25,3 +25,11 @@ roots = ["tsconfig.json"]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
 auto-format = true
+
+[[language]]
+name = "git-commit"
+language-servers = ["ltex-ls"]
+
+[[language]]
+name = "git-rebase"
+language-servers = ["ltex-ls"]

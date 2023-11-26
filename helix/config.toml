@@ -8,7 +8,7 @@ color-modes = true
 mouse = false
 shell = ["fish", "-c"]
 cursorline = true
-auto-info = false
+# auto-info = false
 soft-wrap.enable = true
 
 [editor.cursor-shape]
@@ -17,8 +17,8 @@ normal = "block"
 select = "underline"
 
 [editor.statusline]
-left = ["mode", "spinner", "workspace-diagnostics"]
-center = ["file-base-name", "version-control"]
+left = ["mode", "spinner", "version-control"]
+center = ["file-base-name", "workspace-diagnostics", "register"]
 right = [
   "primary-selection-length",
   "position-percentage",
@@ -69,7 +69,7 @@ esc = ["collapse_selection", "keep_primary_selection"]
 ], "l" = [
   ":sh $HOME/.config/helix/to_light.sh",
 ] }
-"m" = { "m" = ":sh alacritty -e gitui", "e" = ":sh git commit --amend" }
+"m" = { "e" = ":sh alacritty -e git commit --amend" }
 "n" = { "n" = ":sh alacritty -o window.padding.x=60 window.padding.y=60" }
 "/" = "toggle_comments"
 ";" = ":sh alacritty -e broot"
