@@ -168,10 +168,6 @@ function td --description 'switch to dark theme'
   $HOME/.config/helix/to_dark.sh
 end
 
-function ts --description 'select theme'
-  alacritty-theme-switch $argv 
-end
-
 # usb
 function um --description 'mount usb'
   udisksctl mount -b /dev/sdb1

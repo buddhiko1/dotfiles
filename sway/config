@@ -186,11 +186,12 @@ mode "$system_mode" {
 bindsym $mod+Delete mode "$system_mode"
 
 ### app mode
-set $app_mode ( g ) gimp  ( i ) inkscape   ( o ) office  ( s ) sigil  ( v ) vscode
+set $app_mode ( g ) gimp  ( i ) inkscape   ( o ) office  ( c ) cloud  ( s ) sigil  ( v ) vscode
 mode "$app_mode" {
   bindsym g exec gimp,                              mode "default"
   bindsym i exec inkscape,                          mode "default"
   bindsym o exec office.AppImage,                   mode "default"
+  bindsym c exec Nextcloud.AppImage,                mode "default"
   bindsym s exec sigil,                             mode "default"
   bindsym v exec vscode,                            mode "default"
 
@@ -219,6 +220,8 @@ bindsym $mod+p exec sioyek.AppImage
 
 bindsym $mod+semicolon exec dict.AppImage
 for_window [class="GoldenDict"] floating enable
+
+for_window [class="Nextcloud"] floating enable
 
 ### libinput-gesturqutebrowser
 # bindsym $mod+F7 exec pkill wlsunset && wlsunset -t $temp_max -S 23:58 -s 23:58

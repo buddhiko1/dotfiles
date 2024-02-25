@@ -5,7 +5,8 @@ local servers = {
   "rust_analyzer",
   "cssls",
   "html",
-  "tsserver",
+  -- "tsserver",
+  "volar",
   "graphql",
   "dockerls",
   "yamlls",
@@ -58,7 +59,13 @@ M.config = function()
     if require_ok then
       options = vim.tbl_deep_extend("force", server_option, options)
     end
-    lspconfig[server].setup(options)
+    if server == "ltex" then
+      if vim.bo.filetype == "markdown" then
+        lspconfig[server].setup(options)
+      end
+    else
+      lspconfig[server].setup(options)
+    end
   end
 end
 

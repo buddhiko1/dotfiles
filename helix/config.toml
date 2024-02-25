@@ -1,4 +1,4 @@
-theme = "github_light"
+theme = "github_dark"
 
 [editor]
 auto-save = true
@@ -17,9 +17,10 @@ normal = "block"
 select = "underline"
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control"]
-center = ["file-base-name", "workspace-diagnostics", "register"]
+left = ["mode"]
+center = ["version-control", "workspace-diagnostics", "register"]
 right = [
+  "spinner",
   "primary-selection-length",
   "position-percentage",
   "file-encoding",
