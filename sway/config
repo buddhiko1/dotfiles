@@ -17,6 +17,8 @@ set $text_color         #ffffff
 set $term alacritty
 set $hxTerm alacritty -o font.size=13 font.offset.y=6
 
+set $wallpapers_path    $HOME/.config/wallpapers/
+
 ### control 
 bindsym $mod+Shift+s    reload
 bindsym $mod+Shift+q    exec "swaynag -t warning -m 'Do you really want to exit sway?' -B 'Yes, exit sway' 'swaymsg exit'"
@@ -248,13 +250,13 @@ input type:keyboard {
 seat seat0 xcursor_theme Adwaita
 seat * hide_cursor 5000
 
-### background
-output * bg $HOME/.config/background/bg.jpg fill
+### wallpapers
+output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
 
 ### sleep
 exec swayidle -w \
-  timeout 1200 'swaylock' \
-  timeout 13600 'systemctl hybrid-sleep' \
+  # timeout 1200 'swaylock' \
+  timeout 3600 'systemctl hybrid-sleep' \
   before-sleep 'block'
 
 ### notification
@@ -264,7 +266,7 @@ exec mako
 exec pulseaudio -D
 
 # Lock screen before actually starting, to be used with fish autologin
-exec swaylock
+# exec swaylock
 
 ### auto startup
 exec $HOME/.config/sway/startup.sh
