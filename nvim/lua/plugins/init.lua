@@ -152,6 +152,7 @@ local plugins = {
     end,
   },
   ["rcarriga/nvim-dap-ui"] = {
+    requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
     config = function()
       require("plugins.configs.nvim_dap_ui").setup()
       require("plugins.configs.nvim_dap_ui").config()
