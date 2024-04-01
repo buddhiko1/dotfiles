@@ -1,0 +1,6 @@
+(
+    enter: Some("Enter"),
+    shift: Some("Shift"),
+    tab: Some("Tab"),
+    esc: Some("Esc")
+)

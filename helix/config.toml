@@ -1,0 +1,85 @@
+theme = "github_light"
+
+[editor]
+auto-save = true
+bufferline = "always"
+true-color = true
+color-modes = true
+mouse = false
+shell = ["fish", "-c"]
+cursorline = true
+# auto-info = false
+soft-wrap.enable = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode"]
+center = ["version-control", "workspace-diagnostics", "register"]
+right = [
+  "spinner",
+  "primary-selection-length",
+  "position-percentage",
+  "file-encoding",
+  "file-line-ending",
+]
+separator = "│"
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "S"
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+";" = [":write!", ":buffer-close"]
+"," = "extend_line_below"
+"x" = "collapse_selection"
+"y" = ":clipboard-yank"
+"Y" = ["extend_line", ":clipboard-yank"]
+"p" = "paste_clipboard_after"
+"d" = [":clipboard-yank", "delete_selection"]
+"D" = ["extend_line", ":clipboard-yank", "delete_selection"]
+"R" = ":clipboard-paste-replace"
+"G" = "goto_last_line"
+"H" = "goto_previous_buffer"
+"L" = "goto_next_buffer"
+"J" = "half_page_down"
+"K" = "half_page_up"
+
+[keys.insert]
+"C-p" = "paste_clipboard_before"
+
+[keys.normal.space]
+"j" = { "h" = ":toggle file-picker.hidden", "i" = ":toggle file-picker.git-ignore", "j" = "file_picker_in_current_directory", "k" = "global_search" }
+"s" = { "s" = "symbol_picker", "j" = "workspace_diagnostics_picker", "a" = "code_action", "h" = "hover", "n" = "goto_next_diag", "r" = "rename_symbol", "m" = [
+  ":format",
+], "l" = ":toggle lsp.display-inlay-hints" }
+"q" = ":wqa!"
+"c" = { "r" = ":config-reload", "o" = ":config-open", "l" = ":open ~/.config/helix/languages.toml" }
+"h" = { "h" = "command_palette", "j" = "join_selections", "u" = "goto_last_modified_file", "i" = "goto_last_accessed_file", "a" = "select_all", "n" = [
+  "move_char_right",
+  "move_prev_word_start",
+  "move_next_word_end",
+  "search_selection",
+  "search_next",
+] }
+"t" = { "d" = [
+  ":sh $HOME/.config/helix/to_dark.sh",
+], "l" = [
+  ":sh $HOME/.config/helix/to_light.sh",
+] }
+"m" = { "e" = ":sh alacritty -e git commit --amend" }
+"n" = { "n" = ":sh alacritty -o window.padding.x=60 window.padding.y=60" }
+"/" = "toggle_comments"
+";" = ":sh alacritty -e broot"
+
+[keys.select]
+"y" = ":clipboard-yank"
+"d" = [":clipboard-yank", "delete_selection"]
+"," = "extend_line_below"
+"x" = "collapse_selection"
+
+[keys.select.space]
+"/" = "toggle_comments"

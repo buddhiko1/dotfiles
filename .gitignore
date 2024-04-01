@@ -1,0 +1,5 @@
+*.bak
+rime/build/
+helix/runtime/*.*
+broot/launcher/
+broot/skins/

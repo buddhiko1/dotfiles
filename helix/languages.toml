@@ -1,0 +1,35 @@
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "ltex-ls"]
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+roots = ["package.json"]
+
+[[language]]
+name = "css"
+language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+roots = ["package.json"]
+
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+roots = ["package.json"]
+
+[[language]]
+name = "typescript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+roots = ["tsconfig.json"]
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
+auto-format = true
+
+[[language]]
+name = "git-commit"
+language-servers = ["ltex-ls"]
+
+[[language]]
+name = "git-rebase"
+language-servers = ["ltex-ls"]
