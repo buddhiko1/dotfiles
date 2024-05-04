@@ -1,15 +1,8 @@
 #!/bin/bash
 
-# Set file path
-file_path="$HOME/.config/helix/config.toml"
+alacritty_config="$HOME/.config/alacritty/alacritty.toml"
+sed -i 's/github_dark/github_light/g' $alacritty_config
 
-# Set theme
-light_theme="github_light"
-
-# Replace theme value in first line of file with 'data'
-sed -i '1s/theme = .*/theme = "github_light"/' $file_path
-
+hx_config="$HOME/.config/helix/config.toml"
+sed -i '1s/theme = "github_dark"/theme = "github_light"/' $hx_config
 pkill -USR1 hx
-
-alacritty-themes github_light > /dev/null
-rm -rf ~/.config/alacritty/*.bak
