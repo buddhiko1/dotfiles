@@ -34,8 +34,16 @@ function ei --description 'emerge install'
   sudo emerge --ask $argv
 end
 
+function eib --description 'emerge install binary package'
+  sudo emerge --ask --getbinpkg $argv
+end
+
 function ed --description 'emerge uninstall'
   sudo emerge --deselect $argv
+end
+
+function eq --description 'query USE flags for package'
+  sudo equery u $argv
 end
 
 function edep --description 'list package dependent on'
@@ -44,6 +52,11 @@ end
 
 function eu --description 'emerge update'
   sudo emerge --update --deep --newuse @world --exclude nodejs --exclude gentoo-sources --exclude grub
+end
+
+
+function ecu --description 'config update'
+  sudo cfg-update -u
 end
 
 function ec --description 'emerge deep clean'
@@ -64,11 +77,6 @@ end
 
 function esync --description 'emerge sync'
   sudo emerge --sync
-end
-
-# file manager
-function f --description 'file manager'
-  nnn
 end
 
 # git
@@ -95,16 +103,6 @@ end
 
 function ie --description 'edit screenshot'
   swappy -f ~/Pictures/last.png -o ~/Pictures/last.png
-end
-
-# key name
-function kn --description 'get key name'
-  wev 
-end
-
-# angular 
-function ns --description 'pnpm run start'
-  pkill node && pnpm run start
 end
 
 # pnpm
@@ -186,44 +184,7 @@ function vim --description 'nvim'
   nvim $argv
 end
 
-# working directory
-function wpw --description 'pali-web'
-  cd ~/pali-web
-end
-
-# function wps --description 'pali-server'
-#   cd ~/pali-server
-# end
-
-function wd --description 'download'
-  cd ~/Downloads
-end
-
-# zypper
-function zs --description 'zypper search'
-  sudo zypper search $argv
-end
-
-function zi --description 'zypper install'
-  sudo zypper in $argv
-end
-
-function zd --description 'zypper uninstall'
-  sudo zypper rm  $argv
-end
-
-function zu --description 'zypper update'
-  sudo zypper update
-end
-
-function zl --description 'list installed packages'
-  sudo zypper packages -i
-end
-
-function zr --description 'zypper refresh'
-  sudo zypper refresh
-end
-
-function zq --description 'zypper info'
-  sudo zypper info $argv
+# angular 
+function ns --description 'pnpm run start'
+  pkill node && pnpm run start
 end

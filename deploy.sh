@@ -36,12 +36,5 @@ create_soft_link "$HOME/dotfiles" "$HOME/.xkb/symbols" "us-pali"
 create_soft_link "$HOME/dotfiles" "$HOME" ".gitconfig"
 
 # input method
-if [ -f /etc/gentoo-release ]; then
-    echo "gentoo linux..."
-    mkdir -p $HOME/.config/fcitx
-    create_soft_link "$HOME/dotfiles" "$HOME/.config/fcitx" "rime"
-else
-    echo "opensuse..."
-    mkdir -p $HOME/.local/share/fcitx5
-    create_soft_link "$HOME/dotfiles" "$HOME/.local/share/fcitx5" "rime"
-fi
+mkdir -p $HOME/.config/fcitx
+create_soft_link "$HOME/dotfiles" "$HOME/.config/fcitx" "rime"

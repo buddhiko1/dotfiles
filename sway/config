@@ -163,8 +163,8 @@ mode "$system_mode" {
   bindsym l exec swaylock,                    mode "default"
   bindsym q exec swaymsg exit,                mode "default"
   bindsym s exec $Sleep,                      mode "default"
-  bindsym r exec systemctl reboot,            mode "default"
-  bindsym p exec systemctl poweroff -i,       mode "default"
+  bindsym r exec sudo systemctl reboot,            mode "default"
+  bindsym p exec sudo systemctl poweroff -i,       mode "default"
   bindsym w exec $HOME/.config/sway/wifi.sh,  mode "default"
   bindsym c exec grimshot save area ~/Pictures/last.png, mode "default"
 
@@ -221,9 +221,9 @@ bindsym $mod+m exec EDITOR=hx VISUAL=hx alacritty -e nnn
 bindsym $mod+p exec sioyek.AppImage
 
 bindsym $mod+semicolon exec dict.AppImage
-for_window [class="GoldenDict"] floating enable
+for_window [app_id="GoldenDict"] floating enable
 
-for_window [class="Nextcloud"] floating enable
+for_window [app_id="Nextcloud"] floating enable
 
 ### libinput-gesturqutebrowser
 # bindsym $mod+F7 exec pkill wlsunset && wlsunset -t $temp_max -S 23:58 -s 23:58
