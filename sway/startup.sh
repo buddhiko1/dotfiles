@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 
 #
-if [ -f /etc/gentoo-release ]; then
-    swaymsg 'exec fcitx -d --replace'
-else
-    swaymsg 'exec fcitx5 -d --replace'
-fi
+swaymsg 'exec fcitx -d --replace'
 
 # webwork space
-swaymsg 'workspace 1; exec vivaldi --remote-debugging-port=9222'
+swaymsg 'workspace 1; exec vivaldi'
+# swaymsg 'workspace 1; exec vivaldi'
 
 # swaymsg 'workspace 2; exec ~/.config/nvim/start.sh'
 swaymsg 'workspace 2'
@@ -23,7 +20,4 @@ swaymsg 'workspace 4'
 swaymsg 'workspace number 2'
 
 # start goldendict
-swaymsg 'exec ~/.local/bin/dict.AppImage'
-
-# get wireguard port
-~/.config/sway/get_wireguard_port.sh
+swaymsg 'exec goldendict'

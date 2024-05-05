@@ -2,7 +2,7 @@
   name = buddhiko 
 	email = buddhiko@outlook.com
 [core]
-  editor = nvim 
+  editor = hx
 [init]
   defaultBranch = main
 [pull]

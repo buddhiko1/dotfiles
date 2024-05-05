@@ -188,14 +188,12 @@ mode "$system_mode" {
 bindsym $mod+Delete mode "$system_mode"
 
 ### app mode
-set $app_mode ( g ) chrome  ( i ) inkscape   ( o ) office  ( c ) cloud  ( s ) sigil  ( v ) vscode
+set $app_mode ( i ) inkscape   ( o ) office  ( s ) sigil
 mode "$app_mode" {
-  bindsym g exec google-chrome-stable,              mode "default"
   bindsym i exec inkscape,                          mode "default"
   bindsym o exec office.AppImage,                   mode "default"
-  bindsym c exec Nextcloud.AppImage,                mode "default"
+  bindsym c exec nextcloud.AppImage,                mode "default"
   bindsym s exec sigil,                             mode "default"
-  bindsym v exec vscode,                            mode "default"
 
   bindsym BackSpace mode "default"
 }
@@ -214,16 +212,16 @@ bindsym $mod+Next mode "$project_mode"
 
 ### quick start app 
 bindsym $mod+Return exec alacritty -o font.size=16 font.offset.y=6 window.padding.x=60 window.padding.y=60
-bindsym $mod+y exec vivaldi --remote-debugging-port=9222
+bindsym $mod+y exec vivaldi
 bindsym $mod+n exec alacritty -o font.size=13 font.offset.y=5 window.padding.x=0 -e nvim
 bindsym $mod+u exec $hxTerm -e hx
-bindsym $mod+m exec EDITOR=hx VISUAL=hx alacritty -e nnn 
+bindsym $mod+m exec foliate 
 bindsym $mod+p exec sioyek.AppImage
 
-bindsym $mod+semicolon exec dict.AppImage
-for_window [app_id="GoldenDict"] floating enable
+bindsym $mod+semicolon exec goldendict
+for_window [class="GoldenDict"] floating enable
 
-for_window [app_id="Nextcloud"] floating enable
+for_window [class="Nextcloud"] floating enable
 
 ### libinput-gesturqutebrowser
 # bindsym $mod+F7 exec pkill wlsunset && wlsunset -t $temp_max -S 23:58 -s 23:58
@@ -236,9 +234,6 @@ for_window [app_id="Nextcloud"] floating enable
 
 ### temperature
 exec wlsunset -t $temp_middle -S 23:58 -s 23:58
-
-### fcitx
-# exec_always fcitx -d --replace
 
 ### switch pali and us keyboard with right control.
 input type:keyboard {
@@ -256,7 +251,7 @@ output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
 ### sleep
 exec swayidle -w \
   timeout 1200 'swaylock' \
-  timeout 3600 'systemctl hybrid-sleep' \
+  timeout 113600 'systemctl hybrid-sleep' \
   before-sleep 'block'
 
 ### notification
