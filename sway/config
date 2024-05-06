@@ -155,9 +155,8 @@ set $temp_low    2500
 set $temp_middle 3500
 set $temp_max    5800
 set $Sleep       systemctl hybrid-sleep
-set $Gesture     $HOME/.config/sway/gesture.sh
 
-set $system_mode ( l )lock   ( q )logout   ( s )sleep   ( r )reboot   ( p )shutdown   ( g )gestrue   (↑)max   (←)low   (→)middle   (↓)mini   ( pgUp )vpn on  ( pgDn )vpn off   ( c )screenshot   ( w )wifi   ( - )brightness   ( + )brightness   ( i )contrast   ( d )contrast
+set $system_mode ( l )lock   ( q )logout   ( s )sleep   ( r )reboot   ( p )shutdown   (↑)max   (←)low   (→)middle   (↓)mini   ( pgUp )vpn on  ( pgDn )vpn off   ( c )screenshot   ( w )wifi   ( - )brightness   ( + )brightness   ( i )contrast   ( d )contrast
 
 mode "$system_mode" {
   bindsym l exec swaylock,                    mode "default"
@@ -167,8 +166,6 @@ mode "$system_mode" {
   bindsym p exec sudo systemctl poweroff -i,       mode "default"
   bindsym w exec $HOME/.config/sway/wifi.sh,  mode "default"
   bindsym c exec grimshot save area ~/Pictures/last.png, mode "default"
-
-  # bindsym g     exec $Gesture, mode "default"
 
   bindsym Up    exec pkill wlsunset && wlsunset -t $temp_max -S 23:58 -s 23:58,     mode "default"
   bindsym Left  exec pkill wlsunset && wlsunset -t $temp_low -S 23:58 -s 23:58,     mode "default"
@@ -223,15 +220,6 @@ for_window [class="GoldenDict"] floating enable
 
 for_window [class="Nextcloud"] floating enable
 
-### libinput-gesturqutebrowser
-# bindsym $mod+F7 exec pkill wlsunset && wlsunset -t $temp_max -S 23:58 -s 23:58
-# bindsym $mod+F8 exec pkill wlsunset && wlsunset -t $temp_middle -S 23:58 -s 23:58
-# bindsym $mod+F9 exec $HOME/.config/sway/open_vpn.sh
-# bindsym $mod+F10 exec $HOME/.config/sway/close_vpn.sh
-
-### magic gestures
-# exec $Gesture
-
 ### temperature
 exec wlsunset -t $temp_middle -S 23:58 -s 23:58
 
@@ -241,6 +229,11 @@ input type:keyboard {
   xkb_options grp:rctrl_toggle,caps:escape
 }
 
+### touchpad
+input type:touchpad {
+  tap enabled
+  pointer_accel 1 # set mouse sensitivity (between -1 and 1)
+}
 ### cursor
 seat seat0 xcursor_theme Adwaita
 seat * hide_cursor 5000

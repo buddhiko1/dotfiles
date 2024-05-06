@@ -20,4 +20,4 @@ swaymsg 'workspace 4'
 swaymsg 'workspace number 2'
 
 # start goldendict
-swaymsg 'exec goldendict'
+# swaymsg 'exec goldendict'
