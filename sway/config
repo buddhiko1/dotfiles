@@ -162,8 +162,8 @@ mode "$system_mode" {
   bindsym l exec swaylock,                    mode "default"
   bindsym q exec swaymsg exit,                mode "default"
   bindsym s exec $Sleep,                      mode "default"
-  bindsym r exec sudo systemctl reboot,            mode "default"
-  bindsym p exec sudo systemctl poweroff -i,       mode "default"
+  bindsym r exec sudo systemctl reboot,       mode "default"
+  bindsym p exec sudo systemctl poweroff -i,  mode "default"
   bindsym w exec $HOME/.config/sway/wifi.sh,  mode "default"
   bindsym c exec grimshot save area ~/Pictures/last.png, mode "default"
 
@@ -185,12 +185,15 @@ mode "$system_mode" {
 bindsym $mod+Delete mode "$system_mode"
 
 ### app mode
-set $app_mode ( i ) inkscape   ( o ) office  ( s ) sigil
+set $app_mode ( b ) obs   ( c ) cloud   ( e ) shotcut   ( i ) inkscape   ( o ) office  ( s ) sigil   ( v ) vlc
 mode "$app_mode" {
+  bindsym b exec obs,                               mode "default"
+  bindsym c exec nextcloud.AppImage,                mode "default"
+  bindsym e exec shotcut.AppImage,                  mode "default"
   bindsym i exec inkscape,                          mode "default"
   bindsym o exec office.AppImage,                   mode "default"
-  bindsym c exec nextcloud.AppImage,                mode "default"
   bindsym s exec sigil,                             mode "default"
+  bindsym v exec vlc,                               mode "default"
 
   bindsym BackSpace mode "default"
 }

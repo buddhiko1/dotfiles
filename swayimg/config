@@ -41,6 +41,6 @@ slideshow = 2
 app_id = swayimg
 
 # Enable/disable integration with Sway WM (window position managing)
-sway = yes
+# sway = yes
 
 # vim: filetype=dosini

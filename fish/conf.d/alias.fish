@@ -51,7 +51,8 @@ function edep --description 'list package dependent on'
 end
 
 function eu --description 'emerge update'
-    sudo emerge --update --deep --newuse @world --exclude grub --exclude goldendict --exclude gentoo-kernel --exclude foliate
+    # sudo emerge --ask --update --deep --newuse @world --exclude grub --exclude goldendict --exclude gentoo-kernel
+    sudo emerge --ask --update --deep --newuse @world --exclude grub --exclude goldendict
 end
 
 
@@ -73,6 +74,10 @@ end
 
 function ef --description 'emerge use flag'
     sudo emerge --info | grep ^USE
+end
+
+function efd --description 'use flag doc'
+    less /var/db/repos/gentoo/profiles/use.desc $argv
 end
 
 function esync --description 'emerge sync'
