@@ -1,39 +1,32 @@
 import = [
-  "/home/shun/.local/share/pnpm/global/5/.pnpm/alacritty-themes@6.0.2/node_modules/alacritty-themes/themes/github_light.toml"
+  "/home/shun/.local/share/pnpm/global/5/.pnpm/alacritty-themes@6.0.2/node_modules/alacritty-themes/themes/github_dark.toml",
 ]
 
 [env]
 TERM = "rxvt-256color"
 
-[window]
-dynamic_padding = true
-
-  [window.padding]
-  x = 1
-  y = 0
-
 [font]
 size = 14
 
-  [font.normal]
-  family = "JetBrainsMono NFM"
-  style = "Regular"
+[font.normal]
+family = "JetBrainsMono NFM"
+style = "Regular"
 
-  [font.bold]
-  family = "JetBrainsMono NFM"
-  style = "Regular"
+[font.bold]
+family = "JetBrainsMono NFM"
+style = "Regular"
 
-  [font.italic]
-  family = "JetBrainsMono NFM"
-  style = "Italic"
+[font.italic]
+family = "JetBrainsMono NFM"
+style = "Italic"
 
-  [font.bold_italic]
-  family = "JetBrainsMono NFM"
-  style = "Regular Italic"
+[font.bold_italic]
+family = "JetBrainsMono NFM"
+style = "Regular Italic"
 
-  [font.offset]
-  x = 0
-  y = 4
+[font.offset]
+x = 0
+y = 4
 
 [cursor.style]
 shape = "Beam"

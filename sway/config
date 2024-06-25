@@ -185,10 +185,10 @@ mode "$system_mode" {
 bindsym $mod+Delete mode "$system_mode"
 
 ### app mode
-set $app_mode ( b ) obs   ( c ) cloud   ( e ) shotcut   ( i ) inkscape   ( o ) office  ( s ) sigil   ( v ) vlc
+set $app_mode ( a ) anytype   ( b ) obs   ( e ) shotcut   ( i ) inkscape   ( o ) office  ( s ) sigil   ( v ) vlc
 mode "$app_mode" {
+  bindsym a exec anytype.AppImage,                  mode "default"
   bindsym b exec obs,                               mode "default"
-  bindsym c exec nextcloud.AppImage,                mode "default"
   bindsym e exec shotcut.AppImage,                  mode "default"
   bindsym i exec inkscape,                          mode "default"
   bindsym o exec office.AppImage,                   mode "default"
@@ -222,6 +222,7 @@ bindsym $mod+semicolon exec goldendict
 for_window [class="GoldenDict"] floating enable
 
 for_window [class="Nextcloud"] floating enable
+for_window [class="com.github.johnfactotum.Foliate"] border none
 
 ### temperature
 exec wlsunset -t $temp_middle -S 23:58 -s 23:58
