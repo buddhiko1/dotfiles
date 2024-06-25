@@ -52,7 +52,7 @@ end
 
 function eu --description 'emerge update'
     # sudo emerge --ask --update --deep --newuse @world --exclude grub --exclude goldendict --exclude gentoo-kernel
-    sudo emerge --ask --update --deep --newuse @world --exclude grub --exclude goldendict
+    sudo emerge --ask --update --deep --newuse @world --exclude grub --exclude goldendict --exclude gentoo-kernel --exclude sigil
 end
 
 

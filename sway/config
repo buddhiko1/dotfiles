@@ -1,5 +1,9 @@
 ### Read `man 5 sway` for a complete reference.
 
+### https://wiki.gentoo.org/wiki/Sway#Screen_sharing_does_not_work
+exec gnome-keyring-daemon --start --components=secrets
+exec export $(gnome-keyring-daemon)
+
 ### variable
 set $mod   Mod4
 
@@ -185,13 +189,13 @@ mode "$system_mode" {
 bindsym $mod+Delete mode "$system_mode"
 
 ### app mode
-set $app_mode ( a ) anytype   ( b ) obs   ( e ) shotcut   ( i ) inkscape   ( o ) office  ( s ) sigil   ( v ) vlc
+set $app_mode ( a ) anytype   ( o ) obs   ( c ) shotcut   ( i ) inkscape   ( e ) office  ( s ) sigil   ( v ) vlc
 mode "$app_mode" {
   bindsym a exec anytype.AppImage,                  mode "default"
-  bindsym b exec obs,                               mode "default"
-  bindsym e exec shotcut.AppImage,                  mode "default"
+  bindsym o exec obs,                               mode "default"
+  bindsym c exec shotcut.AppImage,                  mode "default"
   bindsym i exec inkscape,                          mode "default"
-  bindsym o exec office.AppImage,                   mode "default"
+  bindsym e exec office.AppImage,                   mode "default"
   bindsym s exec sigil,                             mode "default"
   bindsym v exec vlc,                               mode "default"
 
