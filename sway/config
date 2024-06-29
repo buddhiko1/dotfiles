@@ -1,10 +1,10 @@
 ### Read `man 5 sway` for a complete reference.
+exec --no-startup-id dbus-update-activation-environment --all
 
 ### https://wiki.gentoo.org/wiki/Sway#Screen_sharing_does_not_work
 exec gnome-keyring-daemon --start --components=secrets
 exec export $(gnome-keyring-daemon)
 
-### variable
 set $mod   Mod4
 
 set $up    k

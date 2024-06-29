@@ -51,10 +51,13 @@ function edep --description 'list package dependent on'
 end
 
 function eu --description 'emerge update'
-    # sudo emerge --ask --update --deep --newuse @world --exclude grub --exclude goldendict --exclude gentoo-kernel
-    sudo emerge --ask --update --deep --newuse @world --exclude grub --exclude goldendict --exclude gentoo-kernel --exclude sigil
+    sudo emerge --ask --update --deep --newuse @world --exclude grub --exclude vivaldi
 end
 
+
+function euc --description 'emerge update changed-use'
+    sudo emerge --ask --verbose --changed-use --update --deep @world $argv
+end
 
 function ecu --description 'config update'
     sudo cfg-update -u
